@@ -1,0 +1,60 @@
+<!-- This is the top section -->
+<p></p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Gallery</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Cultural</a>
+          <a class="dropdown-item" href="#">Inktober</a>
+          <a class="dropdown-item" href="#">Miscellaneous</a>
+          <a class="dropdown-item" href="#">Political Cartoon</a>
+          <a class="dropdown-item" href="#">Portrait</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- This is the gallery -->
+<div class="container">
+  <div class="row">
+    <div class="col-3" *ngFor="let item of galleryArray">
+      <img [src]="item.url">
+    </div>
+  </div>
+</div>
+
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <img src="../assets/maiz.jpg" alt="Random first slide">
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="../assets/cactus.jpg" alt="Random second slide">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="../assets/flower.jpg" alt="Random third slide">
+    <div class="carousel-caption">
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </ng-template>
+</ngb-carousel>

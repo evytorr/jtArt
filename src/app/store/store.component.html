@@ -1,0 +1,39 @@
+<p></p>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Store</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+
+      <div class="btn-group">
+        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Categories
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Cultural</a>
+          <a class="dropdown-item" href="#">Inktober</a>
+          <a class="dropdown-item" href="#">Miscellaneous</a>
+          <a class="dropdown-item" href="#">Political Cartoon</a>
+          <a class="dropdown-item" href="#">Portrait</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- These are the store icons -->
+<div class="container">
+  <div class="row">
+    <div class="col-3 merchDisplay" *ngFor="let item of storeArray">
+      <img [src]="item.url">
+      <h6>{{item.title}}</h6>
+      <p>{{item.dimensions}}</p>
+      <p>{{item.price}}</p>
+      <a class="btn btn-primary" href="#" role="button">Add to Cart</a>
+    </div>
+  </div>
+</div>
