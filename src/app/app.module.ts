@@ -13,6 +13,7 @@ import { StoreComponent } from './store/store.component';
 import { GalleryComponent } from './gallery/gallery.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { CategoryPipe } from './category.pipe';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ContactUsComponent,
     HomeComponent,
     StoreComponent,
-    GalleryComponent
+    GalleryComponent,
+    CategoryPipe
   ],
   imports: [
     BrowserModule,
