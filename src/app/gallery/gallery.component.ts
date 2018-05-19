@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-
+  public categorySearch = '';
   public galleryArray = [
     {
       url: '../assets/cultural/atole.jpg',
@@ -197,7 +197,7 @@ export class GalleryComponent implements OnInit {
       type: 'politicalCartoon',
     },
     {
-      url: '../assets/politicalCartoon/mcconnell.jpg',
+      url: '../assets/politicalCartoon/mcconell.jpg',
       type: 'politicalCartoon',
     },
     {
@@ -209,7 +209,7 @@ export class GalleryComponent implements OnInit {
       type: 'politicalCartoon',
     },
     {
-      url: '../assets/politicalCartoon/puppet.jpg',
+      url: '../assets/politicalCartoon/Puppet.jpg',
       type: 'politicalCartoon',
     },
     {
@@ -258,13 +258,14 @@ export class GalleryComponent implements OnInit {
     },
   ];
 
-
-
-
-
   constructor() { }
 
   ngOnInit() {
   }
 
+  changeCategory() {
+    if (this.categorySearch === 'all') {
+      this.categorySearch = '';
+    }
+  }
 }
