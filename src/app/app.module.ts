@@ -14,6 +14,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CategoryPipe } from './category.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { CategoryPipe } from './category.pipe';
     AppRoutingModule,
     NgbModule.forRoot(),
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+<!-- This is the top section -->
 <p></p>
 <div class="container">
   <div class="row">
@@ -8,7 +9,7 @@
   <div class="row">
     <div class="col">
 
-      <div class="btn-group">
+      <!-- <div class="btn-group">
         <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Categories
         </button>
@@ -19,7 +20,20 @@
           <a class="dropdown-item" href="#">Political Cartoon</a>
           <a class="dropdown-item" href="#">Portrait</a>
         </div>
-      </div>
+      </div> -->
+      <form>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">Categories</label>
+          <select class="form-control" [(ngModel)]="categorySearch" (change)="changeCategory()" name="categorySearch">
+            <option>All</option>
+            <option>Cultural</option>
+            <option>Inktober</option>
+            <option>Miscellaneous</option>
+            <option>Political</option>
+            <option>Portrait</option>
+          </select>
+        </div>
+      </form>
 
     </div>
   </div>
@@ -28,7 +42,7 @@
 <!-- These are the store icons -->
 <div class="container">
   <div class="row">
-    <div class="col-3 merchDisplay" *ngFor="let item of storeArray">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 merchDisplay" *ngFor="let item of storeArray | category: categorySearch">
       <img [src]="item.url">
       <h6>{{item.title}}</h6>
       <p>{{item.dimensions}}</p>

@@ -1,12 +1,13 @@
 <h3 class="title">Contact Form</h3>
 
 <div class="container">
+  <!-- This gives your form a name and adds Event Listener: -->
   <form action="/action_page.php" #contactForm="ngForm" (ngSubmit)="submit()">
     <label for="fname">First Name</label>
     <input type="text" id="fname" name="firstName" placeholder="Your name.." [(ngModel)]="contact.firstName">
 
     <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.." [(ngModel)]="contact.lastName">
+    <input type="text" id="lname" name="lastName" placeholder="Your last name.." [(ngModel)]="contact.lastName">
 
     <label for="lname">E-Mail</label>
     <input type="text" id="email" name="email" placeholder="Your e-mail address.." [(ngModel)]="contact.email" required>
