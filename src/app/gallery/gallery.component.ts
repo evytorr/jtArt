@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-// import {HttpClientModule} from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -8,7 +7,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent implements OnInit {
-  public categorySearch = '';
+  public search = 'All';
+  public filter = '';
   public galleryArray = [];
 
   // inside of constructor(), write the following:
@@ -30,8 +30,12 @@ export class GalleryComponent implements OnInit {
   }
 
   changeCategory() {
-    if (this.categorySearch === 'all') {
-      this.categorySearch = '';
+    if (this.search === 'All') {
+      this.filter = '';
+    } else {
+      this.filter = this.search;
     }
+
+    console.log(this.filter);
   }
 }

@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ContactUsComponent implements OnInit {
 
-  public contacts = [ ];
+  public contacts = [];
 
   public contact = {
     firstName: '',
@@ -24,10 +24,10 @@ export class ContactUsComponent implements OnInit {
 
   submit() {
     this.http.post('http://localhost:8080/sendEmail', this.contact)
-      .subscribe( (response: any) => {
+      .subscribe((response: any) => {
         console.log(response);
       }, (error) => {
         console.log(error);
       });
-    }
   }
+}

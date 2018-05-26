@@ -1,4 +1,6 @@
-body {font-family: Arial, Helvetica, sans-serif;}
+div {
+    font-family: 'Varela Round', sans-serif;
+}
 
 input[type=text], select, textarea {
     width: 100%;

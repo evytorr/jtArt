@@ -24,7 +24,7 @@
       <form>
         <div class="form-group">
           <label for="exampleFormControlSelect2">Categories</label>
-          <select class="form-control dropdown" [(ngModel)]="categorySearch" (change)="changeCategory()" name="categorySearch">
+          <select class="form-control dropdown" [(ngModel)]="search" (change)="changeCategory()" name="categorySearch">
             <option>All</option>
             <option>Cultural</option>
             <option>Inktober</option>
@@ -42,7 +42,7 @@
 <!-- These are the store icons -->
 <div class="container">
   <div class="row">
-    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 merchDisplay" *ngFor="let item of storeArray | category: categorySearch">
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 merchDisplay" *ngFor="let item of storeArray | category: filter">
       <img [src]="item.url" class="shadow p-3 mb-5">
       <h6>{{item.title}}</h6>
       <p>{{item.dimensions}}</p>
