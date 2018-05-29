@@ -22,3 +22,24 @@ h2 {
 div {
     font-family: 'Varela Round', sans-serif;
 }
+
+.img-container{
+    height: 200px;
+    width: 275px;
+    overflow: hidden;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+
+.img-container img{
+    height: 89%;
+    width: 73%;
+    object-fit: cover;
+}
+
+.item-content{
+    height: 100px;
+    width: 100%;
+    overflow: hidden;
+}

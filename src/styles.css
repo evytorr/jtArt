@@ -1,14 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-.navBar {
-    margin-left: auto;
-    color: white;
-}
-
-.navbar-color {
-    background-color: #001514;
-    color: white;
-}
-
 a {
     color: white;
 }
@@ -28,14 +18,11 @@ img {
     text-align: center;
 }
 
-
-button {
-    background-color: #001514;
-    color: white;
+h3 {
+    text-align: center;
 }
 
-
-h3 {
+.footer {
     text-align: center;
 }
 
@@ -47,26 +34,22 @@ h3 {
     text-decoration: none;
     margin: 5px 2px;
 }
-  
+
 .fa:hover {
-      opacity: 0.7;
+    opacity: 0.7;
 }
 
 .fa-facebook {
-    background: white;
-    color: #A3320B;
-  }
+  background: #F5E2D4;
+  color: #7A7D7D;
+}
 
 .fa-instagram {
-    background: white;
-    color: #A3320B;
+  background: #F5E2D4;
+  color: #7A7D7D;
 }
 
 .fa-google {
-    background: white;
-    color: #A3320B;
-  }
-
-.footer {
-    text-align: center;
+  background:#F5E2D4;
+  color: #7A7D7D;
 }

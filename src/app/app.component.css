@@ -1,3 +1,13 @@
+.navBar {
+    margin-left: auto;
+    color: white;
+}
+
+.navbar-color {
+    background-color: #565254;
+    color: white;
+}
+
 .navbar-brand {
     font-family: 'Pacifico', cursive;
     font-size: x-large;
@@ -5,4 +15,20 @@
 
 .navBar {
     font-family: 'Varela Round', sans-serif;
+}
+
+body {
+    background-color: #F5E2D4;
+}
+
+.nav-link {
+    color: white;
+}
+
+.active-link{
+    color: #A8C69F;
+}
+
+a:hover {
+    color: #A8C69F;
 }
