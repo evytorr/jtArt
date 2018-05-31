@@ -5,3 +5,9 @@ a {
 div {
     font-family: 'Varela Round', sans-serif;
 }
+
+.topCol img {
+    box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 450px;
+    width: auto;
+}
