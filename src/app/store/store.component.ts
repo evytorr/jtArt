@@ -14,7 +14,7 @@ export class StoreComponent implements OnInit {
   constructor(public http: HttpClient) { }
 
   ngOnInit() {
-    this.http.get('http://localhost:8080/getStore')
+    this.http.get('https://jtart-server.herokuapp.com/getStore')
       .subscribe((response: any) => {
         // res is the name you can give it. you can also name it response or whatever //
         console.log(response);
