@@ -40,4 +40,12 @@ closeResult: string;
 
     });
   }
+  clear() {
+    this.contact = {
+      firstName: '',
+      lastName: '',
+      email: '',
+      comments: '',
+    };
+  }
 }

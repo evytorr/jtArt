@@ -11,33 +11,33 @@
       <!-- This gives your form a name and adds Event Listener: -->
       <form #contactForm="ngForm" (ngSubmit)="submit(content)">
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstName" placeholder="Your name.." [(ngModel)]="contact.firstName">
+        <input type="text" id="fname" name="firstName" placeholder="Your name.." [(ngModel)]="contact.firstName" required>
 
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastName" placeholder="Your last name.." [(ngModel)]="contact.lastName">
+        <input type="text" id="lname" name="lastName" placeholder="Your last name.." [(ngModel)]="contact.lastName" required>
 
         <label for="lname">E-Mail</label>
         <input type="text" id="email" name="email" placeholder="Your e-mail address.." [(ngModel)]="contact.email" required>
 
 
         <label for="subject">Comments</label>
-        <textarea id="comments" name="comments" placeholder="Write something.." style="height:200px" [(ngModel)]="contact.comments"></textarea>
+        <textarea id="comments" name="comments" placeholder="Write something.." style="height:200px" [(ngModel)]="contact.comments" required></textarea>
 
         <input type="submit" value="Submit" class="btn btn-primary">
         <!-- Button trigger modal -->
 
         <ng-template #content let-c="close" let-d="dismiss">
             <div class="modal-header">
-              <h4 class="modal-title">Modal title</h4>
+              <h4 class="modal-title">Thank You</h4>
               <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <p>One fine body&hellip;</p>
+              <p>Thank you for contacting us!  We will be getting back to you shortly.</p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+              <button type="button" class="btn btn-outline-dark" (click)="c('Close click')" (click)="clear();">Close</button>
             </div>
           </ng-template>
 
