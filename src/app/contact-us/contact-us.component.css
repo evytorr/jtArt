@@ -35,3 +35,13 @@ input[type=submit]:hover {
 .title {
     margin-top: 50px;
 }
+
+
+.error{
+    display: block;
+    font-size: 12px;
+}
+
+.red{ 
+    color: red;
+}
