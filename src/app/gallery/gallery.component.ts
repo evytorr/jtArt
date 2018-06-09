@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { LightboxModule, Lightbox } from 'ngx-lightbox';
 
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
-  styleUrls: ['./gallery.component.css']
+  styleUrls: ['./gallery.component.css'],
 })
 export class GalleryComponent implements OnInit {
   public search = 'All';
@@ -12,7 +13,7 @@ export class GalleryComponent implements OnInit {
   public galleryArray = [];
 
   // inside of constructor(), write the following:
-  constructor(public http: HttpClient) { }
+  constructor(public http: HttpClient, private _lightbox: Lightbox) { }
 
   // ngOnInit is a life cycle function that runs when the page starts//
   // the stuff you write in () is the path from the server//
@@ -37,5 +38,9 @@ export class GalleryComponent implements OnInit {
     }
 
     console.log(this.filter);
+  }
+
+  open(index) {
+    this._lightbox.open(this.galleryArray, index);
   }
 }

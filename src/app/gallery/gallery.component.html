@@ -30,35 +30,38 @@
 <!-- This is the gallery -->
 <div class="container">
   <div class="row">
-    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 img-container" *ngFor="let item of galleryArray | category: filter">
-      <img [src]="item.url" class="items">
-      <!-- shadow p-3 mb-5 -->
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3 img-container" *ngFor="let item of galleryArray | category: filter; let i=index">
+        <img [src]="item.thumb" class="items" (click)="open(i)">
     </div>
   </div>
 </div>
 
-<ngb-carousel>
+<!-- <div class="row">
+  <mdb-image-modal [modalImages]="imagesBasic" type="margin"></mdb-image-modal>
+</div> -->
+
+<!-- <ngb-carousel>
   <ng-template ngbSlide>
-    <img src="../assets/maiz.jpg" alt="Random first slide">
+    <img src="../assets/misc/maiz.jpg" alt="Random first slide">
     <div class="carousel-caption">
       <h3>First slide label</h3>
       <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <img src="../assets/cactus.jpg" alt="Random second slide">
+    <img src="../assets/misc/cactus.jpg" alt="Random second slide">
     <div class="carousel-caption">
       <h3>Second slide label</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
   </ng-template>
   <ng-template ngbSlide>
-    <img src="../assets/flower.jpg" alt="Random third slide">
+    <img src="../assets/misc/flower.jpg" alt="Random third slide">
     <div class="carousel-caption">
       <h3>Third slide label</h3>
       <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
     </div>
   </ng-template>
-</ngb-carousel>
+</ngb-carousel> -->
 
 </div>

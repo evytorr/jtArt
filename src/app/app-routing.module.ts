@@ -6,12 +6,14 @@ import { AboutComponent } from './about/about.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { StoreComponent } from './store/store.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { LightBoxComponent } from './light-box/light-box.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contactus', component: ContactUsComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'light-box', component: LightBoxComponent },
   { path: 'store', component: StoreComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full'}
 ];

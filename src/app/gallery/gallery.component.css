@@ -15,6 +15,7 @@ div {
 .items {
     box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .img-container{
@@ -24,4 +25,11 @@ div {
     text-align: center;
     display: block;
     margin: auto;
+}
+
+::ng-deep .lb-data .lb-close{
+    position: absolute;
+    right: 50px;
+    top: 0;
+    float: none;
 }

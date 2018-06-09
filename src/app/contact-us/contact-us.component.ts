@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 const validator = require('validator');
 const async = require('async');
@@ -27,19 +27,19 @@ export class ContactUsComponent implements OnInit {
   };
 
   constructor(public http: HttpClient, private modalService: NgbModal) { }
-closeResult: string;
+  closeResult: string;
   ngOnInit() {
   }
 
   submit(content) {
     this.loading = true;
     async.forEachOf(this.contact, (value, key, callback) => {
-        let err = false;
-        if (validator.isEmpty(value)) {
-          this.errors[key] = true;
-          err = true;
-        }
-        callback(err);
+      let err = false;
+      if (validator.isEmpty(value)) {
+        this.errors[key] = true;
+        err = true;
+      }
+      callback(err);
 
     }, err => {
       if (!err) {
@@ -54,13 +54,10 @@ closeResult: string;
             this.loading = false;
           });
       } else {
-        // if there is an error turn loader off imediatly
+        // if there is an error turn loader off immediately
         this.loading = false;
       }
     });
-
-
-
   }
 
   openModal(content) {

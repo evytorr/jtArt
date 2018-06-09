@@ -11,10 +11,12 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { StoreComponent } from './store/store.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { CategoryPipe } from './category.pipe';
 import { HttpClientModule } from '@angular/common/http';
+import { LightBoxComponent } from './light-box/light-box.component';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     StoreComponent,
     GalleryComponent,
-    CategoryPipe
+    CategoryPipe,
+    LightBoxComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule.forRoot(),
     FormsModule,
     HttpClientModule,
+    LightboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
