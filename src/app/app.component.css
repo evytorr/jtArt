@@ -1,6 +1,7 @@
 .navBar {
     margin-left: auto;
     color: white;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .navbar-color {
@@ -11,10 +12,6 @@
 .navbar-brand {
     font-family: 'Pacifico', cursive;
     font-size: x-large;
-}
-
-.navBar {
-    font-family: 'Varela Round', sans-serif;
 }
 
 body {

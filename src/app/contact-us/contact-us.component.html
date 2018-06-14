@@ -1,13 +1,8 @@
-<h3 class="title">Contact Us</h3>
-
 <div class="container">
   <div class="row">
 
     <div class="col">
-      For questions, comments, concerns, and commissions, please get in touch by filling out the contact form.
-    </div>
-
-    <div class="col">
+        <p>For questions, comments, concerns, and commissions, please get in touch by filling out the contact form.</p>
       <!-- This gives your form a name and adds Event Listener: -->
       <form #contactForm="ngForm" (ngSubmit)="submit(content)">
         <label for="fname">First Name</label>
@@ -18,7 +13,7 @@
         <input type="text" id="lname" name="lastName" placeholder="Your last name.." [(ngModel)]="contact.lastName" required (blur)="checkIfEmpty('lastName')">
         <span class="error red" *ngIf="errors.lastName">This field cannot be empty</span>
 
-        <label for="lname">E-Mail</label>
+        <label for="email">E-Mail</label>
         <input type="text" id="email" name="email" placeholder="Your e-mail address.." [(ngModel)]="contact.email" required (blur)="checkIfEmpty('email')">
         <span class="error red" *ngIf="errors.email">This field cannot be empty</span>
 
@@ -27,7 +22,6 @@
           required (blur)="checkIfEmpty('comments')"></textarea>
         <span class="error red" *ngIf="errors.comments">This field cannot be empty</span>
 
-        <!-- <input type="submit" value="Submit" class="btn btn-primary" > -->
         <button class="btn btn-primary">
           <span *ngIf="!loading">
             Submit

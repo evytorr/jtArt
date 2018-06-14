@@ -11,3 +11,13 @@ div {
     height: 450px;
     width: auto;
 }
+
+.btn-outline-dark {
+    background-color: #565254;
+    color: white;
+}
+
+.btn :hover {
+    background-color: #A8C69F;
+    color: #565254;
+}
