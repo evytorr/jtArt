@@ -10,8 +10,10 @@
 }
 
 .navbar-brand {
-    font-family: 'Pacifico', cursive;
-    font-size: x-large;
+    /* font-family: 'Pacifico', cursive; */
+    /* font-family: 'Delius Swash Caps', cursive; */
+    font-family: 'Sacramento', cursive;
+    font-size: 200%;
 }
 
 body {
@@ -28,4 +30,8 @@ body {
 
 a:hover {
     color: #A8C69F;
+}
+
+i {
+    font-size: 70%;
 }
